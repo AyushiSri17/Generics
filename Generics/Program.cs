@@ -16,9 +16,12 @@ namespace Generics
             double[] doubleArray = { 12.7, 56.8, 89.2 };
             char[] charArray = { 'H', 'E', 'L', 'L', 'O' };
             string[] stringArray = { "HOW", "ARE", "YOU" };
+            int d = 10, e = 22, f = 55;
+            float g = 20.5f, h = 58.6f, i = 69.9f;
+            string j = "abc", k = "def", l = "ghi";
 
             Console.WriteLine("Please choose option of program to execute");
-            Console.WriteLine("1: PrintArray \n2: PrintArrayUsingGenericMethod \n3: PrintArrayUsingGenericClass \n4. FindMaximumIntergerNumber \n5. FindMaximumFloatNumber \n6. MaximumStringValue");
+            Console.WriteLine("1: PrintArray \n2: PrintArrayUsingGenericMethod \n3: PrintArrayUsingGenericClass \n4. FindMaximumIntergerNumber \n5. FindMaximumFloatNumber \n6. MaximumStringValue \n7. MaximumUsingGenericMethod");
             int option = Convert.ToInt32(Console.ReadLine());
 
             switch (option)
@@ -68,6 +71,14 @@ namespace Generics
                     string str3 = Console.ReadLine();
                     string value=MaximumStringValue.FindMaxValue(str1, str2, str3);
                     Console.WriteLine("{0} is greatest among {1} {2} {3}", value, str1, str2, str3);
+                    break;
+                case 7:
+                    int intMax=RefactorGenericMethod<int>.FindMaxValues(d,e,f);
+                    Console.WriteLine("{0} is greatest among {1} {2} {3}", intMax, d, e, f);
+                    float floatMax = RefactorGenericMethod<float>.FindMaxValues(g, h, i);
+                    Console.WriteLine("{0} is greatest among {1} {2} {3}", floatMax, g, h, i);
+                    string stringMax = RefactorGenericMethod<string>.FindMaxValues(j, k, l);
+                    Console.WriteLine("{0} is greatest among {1} {2} {3}", stringMax, j, k, l);
                     break;
                 default:
                     Console.WriteLine("Choose the correct option");
