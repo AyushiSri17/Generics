@@ -47,6 +47,7 @@
     <Compile Include="GenericPrintArray.cs" />
     <Compile Include="MaximumFloatNumber.cs" />
     <Compile Include="MaximumIntergerNumber.cs" />
+    <Compile Include="MaximumStringValue.cs" />
     <Compile Include="PrintArray.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
