@@ -18,7 +18,7 @@ namespace Generics
             string[] stringArray = { "HOW", "ARE", "YOU" };
 
             Console.WriteLine("Please choose option of program to execute");
-            Console.WriteLine("1: PrintArray \n2: PrintArrayUsingGenericMethod \n3: PrintArrayUsingGenericClass \n4. FindMaximunIntergerNumber");
+            Console.WriteLine("1: PrintArray \n2: PrintArrayUsingGenericMethod \n3: PrintArrayUsingGenericClass \n4. FindMaximumIntergerNumber \n5. FindMaximumFloatNumber");
             int option = Convert.ToInt32(Console.ReadLine());
 
             switch (option)
@@ -51,6 +51,15 @@ namespace Generics
                     int b = Convert.ToInt32(Console.ReadLine());
                     int c = Convert.ToInt32(Console.ReadLine());
                     MaximumIntergerNumber.FindMaxValue(a, b, c);
+                    break;
+                case 5:
+                    //float p=0.0f , q=0.0f , r=0.0f ,result=0.0f;
+                    Console.WriteLine("Enter 3 Float Numbers");
+                    float p = float.Parse(Console.ReadLine());
+                    float q = float.Parse(Console.ReadLine());
+                    float r = float.Parse(Console.ReadLine());
+                    float result=MaximumFloatNumber.FindMaxValue(p, q, r);
+                    Console.WriteLine("{0} is greatest among {1} {2} {3}",result,p,q,r);
                     break;
                 default:
                     Console.WriteLine("Choose the correct option");
