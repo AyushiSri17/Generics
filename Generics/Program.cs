@@ -18,7 +18,7 @@ namespace Generics
             string[] stringArray = { "HOW", "ARE", "YOU" };
 
             Console.WriteLine("Please choose option of program to execute");
-            Console.WriteLine("1: PrintArray \n2: PrintArrayUsingGenericMethod \n3: PrintArrayUsingGenericClass ");
+            Console.WriteLine("1: PrintArray \n2: PrintArrayUsingGenericMethod \n3: PrintArrayUsingGenericClass \n4. FindMaximunIntergerNumber");
             int option = Convert.ToInt32(Console.ReadLine());
 
             switch (option)
@@ -44,6 +44,13 @@ namespace Generics
                     charObj.ToPrint();
                     GenericClass<string> stringObj = new GenericClass<string>(stringArray);
                     stringObj.ToPrint();
+                    break;
+                case 4:
+                    Console.WriteLine("Enter 3 Integer Numbers");
+                    int a = Convert.ToInt32(Console.ReadLine());
+                    int b = Convert.ToInt32(Console.ReadLine());
+                    int c = Convert.ToInt32(Console.ReadLine());
+                    MaximumIntergerNumber.FindMaxValue(a, b, c);
                     break;
                 default:
                     Console.WriteLine("Choose the correct option");
