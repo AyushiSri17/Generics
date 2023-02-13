@@ -12,8 +12,8 @@ namespace Generics
         {
             Console.WriteLine("Welcome to generics programming");
             Console.WriteLine("------------------------------------");
-            int[] intArray = { 20, 30, 40 };
-            double[] doubleArray = { 12.7, 56.8, 89.2 };
+            int[] intArray = { 20, 30, 40 , 10, 50};
+            double[] doubleArray = { 12.7, 56.8, 89.2, 19.4, 66.5, 56.8 };
             char[] charArray = { 'H', 'E', 'L', 'L', 'O' };
             string[] stringArray = { "HOW", "ARE", "YOU" };
             int d = 10, e = 22, f = 55;
@@ -21,7 +21,7 @@ namespace Generics
             string j = "abc", k = "def", l = "ghi";
 
             Console.WriteLine("Please choose option of program to execute");
-            Console.WriteLine("1: PrintArray \n2: PrintArrayUsingGenericMethod \n3: PrintArrayUsingGenericClass \n4. FindMaximumIntergerNumber \n5. FindMaximumFloatNumber \n6. MaximumStringValue \n7. MaximumUsingGenericMethod \n8. MaximumUsingGenericClass");
+            Console.WriteLine("1: PrintArray \n2: PrintArrayUsingGenericMethod \n3: PrintArrayUsingGenericClass \n4. FindMaximumIntergerNumber \n5. FindMaximumFloatNumber \n6. MaximumStringValue \n7. MaximumUsingGenericMethod \n8. MaximumUsingGenericClass \n9. ExtendMaxMethod");
             int option = Convert.ToInt32(Console.ReadLine());
 
             switch (option)
@@ -87,6 +87,11 @@ namespace Generics
                     floatObject.TestMaximum();
                     RefactorGenericClass<string> stringObject = new RefactorGenericClass<string>(j,k,l);
                     stringObject.TestMaximum();
+                    break;
+                case 9:
+                    ExtendMaxMethod.Maximum(intArray);
+                    ExtendMaxMethod.Maximum(doubleArray);
+                    ExtendMaxMethod.Maximum(stringArray);
                     break;
                 default:
                     Console.WriteLine("Choose the correct option");
