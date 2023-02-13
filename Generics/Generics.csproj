@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ExtendMaxGenericMethod.cs" />
     <Compile Include="ExtendMaxMethod.cs" />
     <Compile Include="GenericClass.cs" />
     <Compile Include="GenericPrintArray.cs" />
