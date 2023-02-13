@@ -21,7 +21,7 @@ namespace Generics
             string j = "abc", k = "def", l = "ghi";
 
             Console.WriteLine("Please choose option of program to execute");
-            Console.WriteLine("1: PrintArray \n2: PrintArrayUsingGenericMethod \n3: PrintArrayUsingGenericClass \n4. FindMaximumIntergerNumber \n5. FindMaximumFloatNumber \n6. MaximumStringValue \n7. MaximumUsingGenericMethod");
+            Console.WriteLine("1: PrintArray \n2: PrintArrayUsingGenericMethod \n3: PrintArrayUsingGenericClass \n4. FindMaximumIntergerNumber \n5. FindMaximumFloatNumber \n6. MaximumStringValue \n7. MaximumUsingGenericMethod \n8. MaximumUsingGenericClass");
             int option = Convert.ToInt32(Console.ReadLine());
 
             switch (option)
@@ -79,6 +79,14 @@ namespace Generics
                     Console.WriteLine("{0} is greatest among {1} {2} {3}", floatMax, g, h, i);
                     string stringMax = RefactorGenericMethod<string>.FindMaxValues(j, k, l);
                     Console.WriteLine("{0} is greatest among {1} {2} {3}", stringMax, j, k, l);
+                    break;
+                case 8:
+                    RefactorGenericClass<int> intObject = new RefactorGenericClass<int>(d, e, f);
+                    intObject.TestMaximum();
+                    RefactorGenericClass<float> floatObject = new RefactorGenericClass<float>(g,h,i);
+                    floatObject.TestMaximum();
+                    RefactorGenericClass<string> stringObject = new RefactorGenericClass<string>(j,k,l);
+                    stringObject.TestMaximum();
                     break;
                 default:
                     Console.WriteLine("Choose the correct option");

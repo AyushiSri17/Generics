@@ -51,6 +51,7 @@
     <Compile Include="PrintArray.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RefactorGenericClass.cs" />
     <Compile Include="RefactorGenericMethod.cs" />
   </ItemGroup>
   <ItemGroup>
